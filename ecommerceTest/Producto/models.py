@@ -100,3 +100,12 @@ class Venta(models.Model):
     def __str__(self):
         return f"Venta de {self.producto} ({self.cantidad} unidades)"
 
+
+class Cita(models.Model):
+    fecha = models.DateField()
+    hora = models.TimeField()
+    nombre_usuario = models.CharField(max_length=255)
+    telefono = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f"Cita de {self.nombre_usuario} el {self.fecha} a las {self.hora}"
