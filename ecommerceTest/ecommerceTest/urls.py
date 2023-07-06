@@ -17,10 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Producto.views import Lista_Producto
-
+#from Categoria.views import Lista_Categoria
+from Producto.views import CategoriaList, CategoriaDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Producto/', Lista_Producto),
-    
+    #path('categoria/', Lista_Categoria)
+    path('api/categorias/', CategoriaList.as_view(), name='categoria-list'),
+    path('api/categorias/<int:pk>/', CategoriaDetail.as_view(), name='categoria-detail'),
 ]
