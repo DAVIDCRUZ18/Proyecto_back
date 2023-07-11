@@ -10,4 +10,4 @@ class Productoserializers(serializers.ModelSerializer):
 class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Categoria
-        fields = ('id', 'Nombre')
+        fields = '__all__'
