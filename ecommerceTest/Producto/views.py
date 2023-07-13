@@ -16,3 +16,4 @@ def Lista_Categoria(request):
     categorias = Categoria.objects.all()
     serializer = CategoriaSerializer(categorias, many=True)
     return JsonResponse(serializer.data, safe=False)
+
