@@ -17,11 +17,16 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from Producto.views import Lista_Producto
-from Producto.views import Lista_Categoria
+from django.conf import settings
+from django.conf.urls.static import static
+from Producto.views import Lista_Producto, Lista_Categoria, Lista_Moto
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Producto/', Lista_Producto),
-    path('categoria/', Lista_Categoria)
+    path('categoria/', Lista_Categoria),
+    path('Moto/', Lista_Moto),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

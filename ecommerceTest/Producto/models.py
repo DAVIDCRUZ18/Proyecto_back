@@ -12,6 +12,15 @@ class Producto(models.Model):
     def __str__(self):
         return self.nombre
 
+class Moto(models.Model):
+    clase = models.CharField(max_length=255)
+    modelo = models.CharField(max_length=255)
+    ano = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.clase} {self.modelo} {self.ano}'
+
+
 class Categoria(models.Model):
     Nombre = models.CharField(max_length=255)
 

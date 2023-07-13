@@ -1,10 +1,11 @@
 from django.contrib import admin
-from .models import Producto,Categoria,Carrito,Pedido,ItemCarrito,Usuario,Comentario,Favorito,Direccion,Venta,Cita
+from .models import Producto,Categoria,Carrito,Pedido,ItemCarrito,Usuario,Comentario,Favorito,Direccion,Venta,Cita,Moto
 # Register your models here.
 
 
 
 admin.site.register(Producto)
+admin.site.register(Moto)
 admin.site.register(Categoria)
 admin.site.register(Carrito)
 admin.site.register(ItemCarrito)
